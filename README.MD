@@ -25,21 +25,17 @@ The ram and rom requirements for rtfsl built under various configurations is pro
 
 These are for the ARM Processor using the IAR compiler, similar builds need to be made for AVR.
 
-|-------|---------|---------|----------------------|
-| read  |   read  |   read  |                      |
-| only  |   only  |   write |  Build               |
-| code  |   data  |   data  |  description.        |
-| bytes |   bytes |   bytes |                      |
-|-------|---------|---------|----------------------|
-| 7422  |      52 |    1340 | Full build with journaling optimized for size
-| 7098  |      86 |     792 | Full build minus journaling un-optimized
-| 5480  |      52 |     792 | Full build minus journaling optimized
-| 5192  |      20 |     780 | Full build minus journaling, minus subdirectory support optimized for size
-| 3588  |      20 |     780 | Read only file io, directory traversal and file stat functions.
-| 2896  |      12 |     532 | Functionality to load a file from the root directory into memory, optimized for size.
-|-------|---------|---------|----------------------|
+<table>
+<tr><td>read only code bytes</td><td>read only data bytes</td> <td>read/write data bytes</td><td>build description</td><tr>
+<tr><td> 7422  </td><td>  52 </td><td> 1340 </td><td> Full build with journaling optimized for size </td><tr>
+<tr><td> 7098 </td><td>      86 </td><td>     792 </td><td> Full build minus journaling un-optimized</td><tr>
+<tr><td>5480  </td><td>      52 </td><td>     792 </td><td> Full build minus journaling optimized</td><tr>
+<tr><td>5192  </td><td>      20 </td><td>     780 </td><td> Full build minus journaling, minus subdirectory support optimized for size</td><tr>
+<tr><td>3588  </td><td>      20 </td><td>     780 </td><td> Read only file io, directory traversal and file stat functions.</td><tr>
+<tr><td>2896  </td><td>      12 </td><td>     532 </td><td> Functionality to load a file from the root directory into memory, optimized for size.</td><tr>
+</table>
 
-
+<br>
 Full build includes the follow functionality for fat12, fat16 and fat32.:
     . create a sub-directory in the root or in a subdirectory.
     . delete a sub-directory
