@@ -21,20 +21,24 @@ The current code does not support vfat but that can be added pretty easilly in w
 
 The code is still not totally refined so beware, send us an email if you'd find a bug or you would like to conrtibute a patch.
 
-. The ram and rom requirements for rtfsl built under various configurations is provided below.
-. These are for the ARM processor using the IAR compiler, similar builds need to be made for AVR
-=============================================================================================
-read     read     read
-only     only     write   Build
-code     data     data    description.
-bytes    bytes    bytes
--------  -------  -------  ----------------------
- 7422       52    1340     Full build with journaling optimized for size
- 7098       86     792     Full build minus journaling un-optimized
- 5480       52     792     Full build minus journaling optimized
- 5192       20     780     Full build minus journaling, minus subdirectory support optimized for size
- 3588       20     780     Read only file io, directory traversal and file stat functions.
- 2896       12     532     Functionality to load a file from the root directory into memory, optimized for size.
+The ram and rom requirements for rtfsl built under various configurations is provided below.
+
+These are for the ARM Processor using the IAR compiler, similar builds need to be made for AVR.
+
+|-------|---------|---------|----------------------|
+| read  |   read  |   read  |                      |
+| only  |   only  |   write |  Build               |
+| code  |   data  |   data  |  description.        |
+| bytes |   bytes |   bytes |                      |
+|-------|---------|---------|----------------------|
+| 7422  |      52 |    1340 | Full build with journaling optimized for size
+| 7098  |      86 |     792 | Full build minus journaling un-optimized
+| 5480  |      52 |     792 | Full build minus journaling optimized
+| 5192  |      20 |     780 | Full build minus journaling, minus subdirectory support optimized for size
+| 3588  |      20 |     780 | Read only file io, directory traversal and file stat functions.
+| 2896  |      12 |     532 | Functionality to load a file from the root directory into memory, optimized for size.
+|-------|---------|---------|----------------------|
+
 
 Full build includes the follow functionality for fat12, fat16 and fat32.:
     . create a sub-directory in the root or in a subdirectory.
@@ -100,5 +104,4 @@ The currently supported features include:
 Ongoing development efforts include the following:
 . Tests still need to be performed on FAT16 and FAT32.
 . Testing is on-going with development of more rigorous tests planned for tomorrow.
-
 
