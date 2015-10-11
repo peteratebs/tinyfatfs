@@ -1,0 +1,308 @@
+Just file load root file system only, write support disabled in core.
+    main.o                    56
+    rtfslfiliord.o            16                 4
+    rtfslitecore.o         3 948       40      512
+    rtfstlitefileload.o      420
+    rtfstlitetests.o         152       12        4
+    sys.o                     64                          4
+    -------------------------------------------------------
+    Total:                 4 656       52      520        4
+Just file load root file system only, write support enabled in core.
+    main.o                    64
+    rtfslfiliord.o            16                 4
+    rtfslitecore.o         4 388       40      512
+    rtfstlitefileload.o      420
+    rtfstlitetests.o         152       12        4
+    sys.o                     64                          4
+    -------------------------------------------------------
+    Total:                 5 104       52      520        4
+Everything on include write in filiocore and litecore
+    main.o                    64
+    rtfslfileseek.o          276
+    rtfslfilestat.o          164
+    rtfslfiliocore.o       1 164
+    rtfslfiliord.o           312        4      132
+    rtfslgfirst.o            392
+    rtfslitecore.o         4 388       40      512
+    rtfslopenpath.o          500
+    rtfstlitefileload.o      420
+    rtfstlitetests.o       1 060      296        4
+    sys.o                     64                          4
+    -------------------------------------------------------
+    Total:                 8 804      340      648        4
+Everything on exclude write in filiocore and litecore
+    main.o                    56
+    rtfslfileseek.o          276
+    rtfslfilestat.o          164
+    rtfslfiliocore.o         992
+    rtfslfiliord.o           312        4      132
+    rtfslgfirst.o            392
+    rtfslitecore.o         3 948       40      512
+    rtfslopenpath.o          500
+    rtfstlitefileload.o      420
+    rtfstlitetests.o       1 060      296        4
+    sys.o                     64                          4
+    -------------------------------------------------------
+    Total:                 8 184      340      648        4
+ Everything on include write in filiocore and litecore thumb mode
+    main.o                    34
+    rtfslfileseek.o          172
+    rtfslfilestat.o          100
+    rtfslfiliocore.o         732
+    rtfslfiliord.o           192        4      132
+    rtfslfiliowr.o           872
+    rtfslgfirst.o            268
+    rtfslitecore.o         2 852       40      512
+    rtfslopenpath.o          306
+    rtfstlitefileload.o      264
+    rtfstlitetests.o         722      308        4
+    sys.o                     64                          4
+    -------------------------------------------------------
+    Total:                 6 578      352      648        4
+
+ Everything on exclude write in filiocore and litecore thumb mode
+   main.o                    34
+    rtfslfileseek.o          172
+    rtfslfilestat.o          100
+    rtfslfiliocore.o         624
+    rtfslfiliord.o           192        4      132
+    rtfslfiliowr.o           872
+    rtfslgfirst.o            268
+    rtfslitecore.o         2 554       40      512
+    rtfslopenpath.o          306
+    rtfstlitefileload.o      264
+    rtfstlitetests.o         722      308        4
+    sys.o                     64                          4
+    -------------------------------------------------------
+    Total:                 6 172      352      648        4
+ D:\dev\Projects\IAR\arm\examples\NXP\LPC24xx\IAR-LPC-2478\RtfsLite\Flash Debug\Obj: [1]
+    main.o                    30
+    rtfslfiliord.o            12                 4
+    rtfslitecore.o         2 554       40      512
+    rtfstlitefileload.o      264
+    rtfstlitetests.o         106       12        4
+    sys.o                     64                          4
+    -------------------------------------------------------
+    Total:                 3 030       52      520        4
+
+============
+July 2 .....
+
+Full build unoptimized
+    ------               -------  -------  -------  -------
+D:\dev\Projects\IAR\arm\examples\NXP\LPC24xx\IAR-LPC-2478\RtfsLite\Flash Debug\Obj: [1]
+    main.o                    34
+    rtfslconst.o                       44        8
+    rtfsldata.o                         8    1 328
+    rtfsldelete.o            200
+    rtfslfailsafe.o        2 212       24
+    rtfslfileseek.o          172
+    rtfslfilestat.o          112
+    rtfslfiliocore.o       1 080
+    rtfslfiliord.o           308
+    rtfslfiliowr.o         1 180
+    rtfslgfirst.o            268
+    rtfslitecore.o         3 480       32
+    rtfslmkdir.o             292
+    rtfslopenpath.o          306
+    rtfslrmdir.o             144
+    rtfsltime.o               20
+    rtfstlitefileload.o      292
+    rtfstlitetests.o         954      568        4
+    sys.o                     64                          4
+    -------------------------------------------------------
+    Total:                11 118      676    1 340        4
+                           1 394      568
+    Adjusted:              9 724      612    1 340        4
+
+// ===================
+Full build optimized
+D:\dev\Projects\IAR\arm\examples\NXP\LPC24xx\IAR-LPC-2478\RtfsLite\Flash Debug\Obj: [1]
+    main.o                    30
+    rtfslconst.o                       44        8
+    rtfsldata.o                         8    1 328
+    rtfsldelete.o            140
+    rtfslfailsafe.o        1 584
+    rtfslfileseek.o          100
+    rtfslfilestat.o           96
+    rtfslfiliocore.o         772
+    rtfslfiliord.o           220
+    rtfslfiliowr.o           928
+    rtfslgfirst.o            236
+    rtfslitecore.o         2 736
+    rtfslmkdir.o             240
+    rtfslopenpath.o          240
+    rtfslrmdir.o             108
+    rtfsltime.o               20
+    rtfstlitefileload.o      220
+    rtfstlitetests.o       1 324                 4
+    sys.o                     48                          4
+    -------------------------------------------------------
+    Total:                 9 042       52    1 340        4
+                           1 620
+    Adjusted:              7 422       52    1 340        0
+
+// ===================
+Full build minus failsafe un-optimized
+D:\dev\Projects\IAR\arm\examples\NXP\LPC24xx\IAR-LPC-2478\RtfsLite\Flash Debug\Obj: [1]
+    main.o                    34
+    rtfslconst.o                       44        8
+    rtfsldata.o                         8      780
+    rtfsldelete.o            200
+    rtfslfileseek.o          172
+    rtfslfilestat.o          112
+    rtfslfiliocore.o         964
+    rtfslfiliord.o           308
+    rtfslfiliowr.o         1 032
+    rtfslgfirst.o            268
+    rtfslitecore.o         3 332       32
+    rtfslmkdir.o             240
+    rtfslopenpath.o          306
+    rtfslrmdir.o             144
+    rtfsltime.o               20
+    rtfstlitefileload.o      292
+    rtfstlitetests.o         942      568        4
+    sys.o                     64                          4
+    -------------------------------------------------------
+    Total:                 8 430      652      792        4
+                           1 332      568
+    Adjusted:              7 098       86      792        0
+Full build minus failsafe optimized
+D:\dev\Projects\IAR\arm\examples\NXP\LPC24xx\IAR-LPC-2478\RtfsLite\Flash Debug\Obj: [1]
+    main.o                    30
+    rtfslconst.o                       44        8
+    rtfsldata.o                         8      780
+    rtfsldelete.o            140
+    rtfslfileseek.o          100
+    rtfslfilestat.o           96
+    rtfslfiliocore.o         688
+    rtfslfiliord.o           220
+    rtfslfiliowr.o           824
+    rtfslgfirst.o            236
+    rtfslitecore.o         2 600
+    rtfslmkdir.o             208
+    rtfslopenpath.o          240
+    rtfslrmdir.o             108
+    rtfsltime.o               20
+    rtfstlitefileload.o      220
+    rtfstlitetests.o       1 312                 4
+    sys.o                     48                          4
+    -------------------------------------------------------
+    Total:                 7 090       52      792        4
+                           1 610
+    Adjusted:              5 480       52      792        0
+
+Full build minus failsafe, minus subdirectory support optimized
+    main.o                    30
+    rtfslconst.o                       12
+    rtfsldata.o                         8      780
+    rtfsldelete.o            140
+    rtfslfileseek.o          100
+    rtfslfilestat.o           96
+    rtfslfiliocore.o         688
+    rtfslfiliord.o           220
+    rtfslfiliowr.o           824
+    rtfslgfirst.o            236
+    rtfslitecore.o         2 600
+    rtfslopenpath.o          160
+    rtfslrmdir.o             108
+    rtfsltime.o               20
+    rtfstlitefileload.o      220
+    rtfstlitetests.o       1 296                 4
+    sys.o                     48                          0
+    -------------------------------------------------------
+    Total:                 6 786       20      784        4
+                           1 594                 4
+    Adjusted:              5 192       20      780        4
+
+Full build minus failsafe, minus subdirectory support, minus write support
+D:\dev\Projects\IAR\arm\examples\NXP\LPC24xx\IAR-LPC-2478\RtfsLite\Flash Debug\Obj: [1]
+    main.o                    26
+    rtfslconst.o                       12
+    rtfsldata.o                         8      780
+    rtfslfileseek.o          100
+    rtfslfilestat.o           96
+    rtfslfiliocore.o         532
+    rtfslfiliord.o           196
+    rtfslgfirst.o            236
+    rtfslitecore.o         2 268
+    rtfslopenpath.o          160
+    rtfstlitefileload.o      220
+    rtfstlitetests.o         916                 4
+    sys.o                     48                          4
+    -------------------------------------------------------
+    Total:                 4 798       20      784        4
+                           1 210                 4
+    Adjusted:              3 588       20      780        0
+
+Full build minus failsafe, minus subdirectory support, minus write support inus read api, enough to load a file from the root directory into memory
+D:\dev\Projects\IAR\arm\examples\NXP\LPC24xx\IAR-LPC-2478\RtfsLite\Flash Debug\Obj: [1]
+    main.o                    26
+    rtfslconst.o                       12
+    rtfsldata.o                                532
+    rtfslfiliord.o            12
+    rtfslgfirst.o            236
+    rtfslitecore.o         2 268
+    rtfslopenpath.o          160
+    rtfstlitefileload.o      220
+    rtfstlitetests.o         532                 4
+    sys.o                     48                          4
+    -------------------------------------------------------
+    Total:                 3 502       12      536        4
+                             606                 4
+    Adjusted:              2 896       12      532        0
+
+The small file system development is going well.
+
+The currently supported features include:
+. File io (create,reopen, read,write,seek,delete).
+. Subdirectory support (mkdir, rmdir and set working directory).
+. Failsafe journaling and restore support.
+. All features have been tested both with using Failsafe and not using Failsafe.
+. All tests have been performed with FAT12 so far, typically the most difficult case.
+
+Ongoing development efforts include the following:
+. Tests still need to be performed on FAT16 and FAT32.
+. Testing is on-going with development of more rigorous tests planned for tomorrow.
+
+
+. The ram and rom requirements for rtfsl built under various configurations is provided below.
+=============================================================================================
+read     read     read
+only     only     write   Build
+code     data     data    description.
+bytes    bytes    bytes
+-------  -------  -------  ----------------------
+ 9724       52    1340     Full build with failsafe unoptimized
+10210       52    1340     Full build with failsafe unoptimized after eliminating passing drive structure. (removal of const * optimization to blame, need to re-insert const where possible)
+ 7422       52    1340     Full build with failsafe optimized for size
+ 7098       86     792     Full build minus failsafe un-optimized
+ 5480       52     792     Full build minus failsafe optimized
+ 5192       20     780     Full build minus failsafe, minus subdirectory support optimized for size
+ 3588       20     780     Read only file io, directory traverasal and file stat functions.
+ 2896       12     532     Functionality to load a file from the root directory into memory, optimized for size.
+
+Full build includes the follow functionality for fat12, fat16 and fat32.:
+    . create a sub-directory in the root or in a subdirectory.
+    . delete a sub-directory
+    . create a file in the root or in a subdirectory.
+    . write to a file.
+    . read from a file.
+    . seek within a file.
+    . close a file.
+    . delete a file
+When Failsafe support is enabled, the follow functionality is included.
+    . failsafe flush.
+    . failsafe journal of FAT table changes and directory entry changes.
+    . failsafe restore.
+
+    main.o                      34
+    rtfstlitefileload.o        216
+    rtfstlitetestfileio.o      744      260
+    rtfstlitetests.o           726      548      532
+    rtfstlitetestutils.o       774       12
+    sys.o                       64                          4
+    ---------------------------------------------------------
+    Total:                  12 710      960    1 864        4
+                             2 500
+                            10 210

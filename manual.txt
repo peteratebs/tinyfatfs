@@ -1,0 +1,75 @@
+
+Table of contents..
+
+
+Introduction.
+
+
+Configuration and porting
+
+
+API
+
+RTFSL_ERROR_NONE
+RTFSL_ERROR_ARGS
+RTFSL_ERROR_CONSISTENCY
+RTFSL_ERROR_DIR_FULL
+RTFSL_ERROR_DISK_FULL
+RTFSL_ERROR_FDALLOC
+RTFSL_ERROR_FORMAT
+RTFSL_ERROR_JOURNAL_FULL
+RTFSL_ERROR_NOTFOUND
+RTFSL_ERROR_PATH
+RTFSL_ERROR_EXIST
+RTFSL_ERROR_TEST
+/* Recommended device driver error return values, RTFSL does not generate these */
+RTFSL_ERROR_IO_WRITE_PROTECT
+RTFSL_ERROR_IO_NO_MEDIA
+RTFSL_ERROR_IO_ERROR
+
+
+int rtfslfs_start(void)
+int rtfslfs_flush(void)
+int rtfslfs_sync(void)
+int rtfslfs_restore(void)
+int rtfsl_delete(unsigned char *name)
+
+int rtfsl_create(unsigned char *name,unsigned char attribute)
+int rtfsl_open(unsigned char *name)
+int rtfsl_close(int fd)
+int rtfsl_read(int fd, unsigned char *in_buff, int count)
+long rtfsl_lseek(int fd, long offset, int origin)
+int rtfsl_write(int fd, unsigned char *in_buff, int count)
+int rtfsl_fstat(int fd,  struct rtfsl_statstructure *pstat)
+int rtfsl_flush(int fd)
+
+int rtfsl_diskopen(void)
+void rtfsl_setpath(unsigned char **pathnamearray)
+int rtfsl_flush_info_sec(void)
+int rtfsl_flush_all_buffers(void)
+
+int rtfsl_gfirst(struct rtfsl_dstat *statobj, unsigned char *name)
+int rtfsl_gnext(struct rtfsl_dstat *statobj)
+void rtfsl_done(struct rtfsl_dstat *statobj)
+
+int rtfsl_enumerate_file(struct rtfsl_file *pfile,FileScanCallback pCallback, void *puser_data)
+int rtfsl_enumerate_directory(struct rtfsl_file *pdirectory_file,struct rtfsl_file *pcurrent_entry_file,DirScanCallback pCallback, void *puser_data)
+
+int rtfsl_mkdir(unsigned char *name)
+int rtfsl_rmdir(unsigned char *name)
+
+int rtfsl_load_file(unsigned char *filename, unsigned long load_address)
+
+int rtfsl_read_sector(unsigned long sector, unsigned char *buffer)
+int rtfsl_write_sector(unsigned long sector, unsigned char *buffer)
+void rtfsl_get_system_date(unsigned short *time, unsigned short *date)
+
+
+
+
+
+
+Application notes
+
+
+
