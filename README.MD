@@ -36,20 +36,24 @@ These are for the ARM Processor using the IAR compiler, similar builds need to b
 </table>
 
 <br>
-Full build includes the follow functionality for fat12, fat16 and fat32.:
-    . create a sub-directory in the root or in a subdirectory.
-    . delete a sub-directory
-    . create a file in the root or in a subdirectory.
-    . write to a file.
-    . read from a file.
-    . seek within a file.
-    . close a file.
-    . delete a file
+Full build includes the follow functionality for fat12, fat16 and fat32.<br:
+<ul>
+    <li> create a sub-directory in the root or in a subdirectory.</li>
+    <li> delete a sub-directory </li>
+    <li> create a file in the root or in a subdirectory.</li>
+    <li> write to a file.</li>
+    <li> read from a file.</li>
+    <li> seek within a file.</li>
+    <li> close a file.</li>
+    <li> delete a file</li>
+ </ul>
+ 
 When Failsafe support is enabled, the follow functionality is included.
-    . journaling flush.
-    . journaling journal of FAT table changes and directory entry changes.
-    . journaling restore.
-
+<ul>
+    <li>. journaling flush.</li>
+    <li>. journaling journal of FAT table changes and directory entry changes.</li>
+    <li>. journaling restore.</li>
+</ul>
 
 
 
@@ -65,39 +69,39 @@ type:
 for example, to access a USB stick at /dev/sdb1:
    sudo ./main /dev/sdb1
 
-If that is succesfulyou should see the following help screen:
+If that is successful you should see the following help screen:
 
-LOAD FILENAME
-LMOUNT   - re-mount rtfs lite drive
-LEXIT    - Exit Lite mode refreshes device mount for rtfs
-LFLUSH   - Flush rtfs lite buffers
-DIR
-RENAME oldname newname
-DELETE filename
-CHDIR path
-MKDIR dirname 0|1 (1 = fragment)
-RMDIR dirname
-FILLPAT filename nlongs 0|1 (1=fragment)
-APPENDPAT filename nlongs 0|1 (1=fragment)
-READPAT filename
-RANDREAD  filename
-RANDWRITE filename
-FILLDISK filenamebase
-FSSTART Start Journaling
-FSSTOP  Stop  Journaling
-FSSYNC  Sync  volume, keep journaling
-FSFLUSH Flush journal keep journaling
-FSRESTORE Retore the volume from the journal
+LOAD FILENAME<br>
+LMOUNT   - re-mount rtfs lite drive<br>
+LEXIT    - Exit Lite mode refreshes device mount for rtfs<br>
+LFLUSH   - Flush rtfs lite buffers<br>
+DIR<br>
+RENAME oldname newname<br>
+DELETE filename<br>
+CHDIR path<br>
+MKDIR dirname 0|1 (1 = fragment)<br>
+RMDIR dirname<br>
+FILLPAT filename nlongs 0|1 (1=fragment)<br>
+APPENDPAT filename nlongs 0|1 (1=fragment)<br>
+READPAT filename<br>
+RANDREAD  filename<br>
+RANDWRITE filename<br>
+FILLDISK filenamebase<br>
+FSSTART Start Journaling<br>
+FSSTOP  Stop  Journaling<br>
+FSSYNC  Sync  volume, keep journaling<br>
+FSFLUSH Flush journal keep journaling<br>
+FSRESTORE Retore the volume from the journal<br>
 
 
-The currently supported features include:
-. File io (create,reopen, read,write,seek,delete).
-. Subdirectory support (mkdir, rmdir and set working directory).
-. Failsafe journaling and restore support.
-. All features have been tested both with using Failsafe and not using Failsafe.
-. All tests have been performed with FAT12 so far, typically the most difficult case.
-
-Ongoing development efforts include the following:
-. Tests still need to be performed on FAT16 and FAT32.
-. Testing is on-going with development of more rigorous tests planned for tomorrow.
+The currently supported features include:<br>
+. File io (create,reopen, read,write,seek,delete).<br>
+. Subdirectory support (mkdir, rmdir and set working directory).<br>
+. Failsafe journaling and restore support.<br>
+. All features have been tested both with using Failsafe and not using Failsafe.<br>
+. All tests have been performed with FAT12 so far, typically the most difficult case.<br>
+<br>
+Ongoing development efforts include the following:<br>
+. Tests still need to be performed on FAT16 and FAT32.<br>
+. Testing is on-going with development of more rigorous tests planned for tomorrow.<br>
 
